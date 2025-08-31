@@ -10,8 +10,8 @@ export default function DriveSearchApp() {
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const folderId = "YOUR_FOLDER_ID"; // ganti dengan folder ID Google Drive
-  const apiKey = "YOU"; // ganti dengan API key Google
+  const folderId = process.env.REACT_APP_GOOGLE_FOLDER_ID;
+const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
   const searchFiles = async () => {
     if (!query) return;
